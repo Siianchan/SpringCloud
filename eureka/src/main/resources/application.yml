@@ -1,10 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/,http://localhost:8200/eureka/
+---
+spring:
+  config:
+    activate:
+      on-profile: host1
 server:
   port: 8100
-eureka:
-  server:
-    enable-self-preservation: true
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8100/eureka/
+---
+spring:
+  config:
+    activate:
+      on-profile: host2
+server:
+  port: 8200
