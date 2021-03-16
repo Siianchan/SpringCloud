@@ -1,8 +1,7 @@
 package com.microservice.provideruser.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import com.microservice.provideruser.model.User;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ProjectName: springcloud
@@ -17,4 +16,13 @@ public class UserController {
         System.out.println("UserController:"+id);
         return id * 10;
     }
+
+    @PostMapping(value = "/addUser", produces = {"application/json;charset=utf-8"})
+    public User addUser(@RequestBody User user) {
+        System.out.println("addUser:"+user);
+        user.setUserAge(000);
+        user.setUserName("addUser");
+        return user;
+    }
+
 }
