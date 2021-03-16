@@ -20,6 +20,7 @@ public class OrderController {
     @GetMapping("/{id}")
     public Integer findOrder(@PathVariable int id) {
         System.out.println("OrderController:" + id);
+        //microservice-provider-user
         return this.restTemplate.getForObject("http://microservice-provider-user/" + id, Integer.class);
     }
 }

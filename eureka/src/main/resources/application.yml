@@ -2,6 +2,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8100/eureka/,http://localhost:8200/eureka/
+#清除com.nerflix的日志信息
+#logging:
+#  level:
+#    com.netflix: error
 ---
 spring:
   config:
