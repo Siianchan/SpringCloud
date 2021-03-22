@@ -2,6 +2,7 @@ package com.microservice.consumerorder.controller;
 
 import com.microservice.consumerorder.model.User;
 import com.microservice.consumerorder.service.OrderFeign;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -20,9 +21,16 @@ public class OrderController {
     private OrderFeign orderFeign;
 
     @GetMapping("/{id}")
+    //配置方法容错
+    @HystrixCommand(fallbackMethod = "findOrderFallBack")
     public Integer findOrder(@PathVariable int id) {
         System.out.println("OrderController:" + id);
         return this.restTemplate.getForObject("http://microservice-provider-user/" + id, Integer.class);
+    }
+
+    public Integer findOrderFallBack( int id) {
+        System.out.println("findOrderFallBack(hystrix容错调用方法):" + id);
+        return 777;
     }
 
     @GetMapping("/test/{id}")

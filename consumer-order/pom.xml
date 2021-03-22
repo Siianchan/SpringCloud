@@ -18,6 +18,18 @@
         <spring-cloud.version>2020.0.1</spring-cloud.version>
     </properties>
     <dependencies>
+        <dependency>
+            <!--端点监控依赖-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--引入Hystrix相关依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.2.RELEASE</version>
+        </dependency>
         <!--引入feign相关依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
