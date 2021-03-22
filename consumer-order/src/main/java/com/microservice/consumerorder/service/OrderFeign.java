@@ -2,7 +2,6 @@ package com.microservice.consumerorder.service;
 
 import com.microservice.consumerorder.model.User;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 //防止idea自动注入标红
 @Component
 public interface OrderFeign {
-    
     @GetMapping(value = "/{id}")
     public Integer findUser(@PathVariable("id") int id);
     @PostMapping(value = "/addUser")
