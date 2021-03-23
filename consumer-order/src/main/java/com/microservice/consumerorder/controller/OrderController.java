@@ -19,7 +19,6 @@ public class OrderController {
     private RestTemplate restTemplate;
     @Autowired
     private OrderFeign orderFeign;
-
     @GetMapping("/{id}")
     //配置方法容错
     @HystrixCommand(fallbackMethod = "findOrderFallBack")
