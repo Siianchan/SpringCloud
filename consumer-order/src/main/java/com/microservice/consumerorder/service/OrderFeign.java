@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @Create: 2021/3/16 15:02
  * @Description:
  */
-//配置服务方提供的服务名称，并配置熔断之后调用的回退方法   
+//配置服务方提供的服务名称，并配置熔断之后调用的回退方法
 @FeignClient(name = "microservice-provider-user",fallback = FeignFallBack.class)
 //防止idea自动注入标红
 @Component
