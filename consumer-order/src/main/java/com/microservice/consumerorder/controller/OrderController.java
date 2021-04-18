@@ -24,7 +24,6 @@ public class OrderController {
     //配置方法容错
     @HystrixCommand(fallbackMethod = "findOrderFallBack")
     public Integer findOrder(@PathVariable int id) {
-
         System.out.println("OrderController:" + id);
         return this.restTemplate.getForObject("http://microservice-provider-user/" + id, Integer.class);
     }
