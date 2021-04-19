@@ -27,7 +27,6 @@ public class OrderController {
         System.out.println("OrderController:" + id);
         return this.restTemplate.getForObject("http://microservice-provider-user/" + id, Integer.class);
     }
-
     public Integer findOrderFallBack( int id) {
         //容错方法
         System.out.println("findOrderFallBack(hystrix容错调用方法):" + id);
