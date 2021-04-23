@@ -29,7 +29,6 @@ public class OrderController {
     }
     public Integer findOrderFallBack( int id) {
         //容错方法
-        
         System.out.println("findOrderFallBack(hystrix容错调用方法):" + id);
         return 777;
     }
