@@ -36,7 +36,6 @@ public class OrderController {
     @GetMapping("/test/{id}")
     public Integer findOrderFeign(@PathVariable int id) {
         //Feign调用
-        
         System.out.println("OrderController(Feign):" + id);
         return this.orderFeign.findUser(id);
     }
