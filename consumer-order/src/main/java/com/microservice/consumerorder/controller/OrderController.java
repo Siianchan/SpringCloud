@@ -43,6 +43,7 @@ public class OrderController {
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user) {
         //Feign调用
+        
         System.out.println("OrderController:====="+user);
         User returnUser = this.orderFeign.addUser(user);
         returnUser.setUserAge(8002);
