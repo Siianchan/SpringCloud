@@ -39,7 +39,6 @@ public class OrderController {
         System.out.println("OrderController(Feign):" + id);
         return this.orderFeign.findUser(id);
     }
-
     @PostMapping("/addUser")
     public User addUser(@RequestBody User user) {
         //Feign调用
