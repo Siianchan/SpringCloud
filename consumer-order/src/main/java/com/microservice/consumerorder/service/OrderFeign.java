@@ -23,7 +23,6 @@ public interface OrderFeign {
 }
 @Component
 class FeignFallBack implements OrderFeign{
-
     @Override
     public Integer findUser(int id) {
         System.out.println("调用findUser回退方法");
