@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-//@EnableFeignClients(basePackages = "com.microservice.consumerorder.service")
+//@EnableFeignClients(basePackages = "com.microservice.consumerorder.service") 扫描和注册feign客户端bean定义
 //加了@Component 可以不用添加包扫描
 @EnableHystrix
     public class ConsumerOrderApplication {

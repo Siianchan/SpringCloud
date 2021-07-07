@@ -8,6 +8,8 @@ eureka:
 #    com.netflix: error
 ---
 spring:
+  application:
+    name: eureka1
   config:
     activate:
       on-profile: host1
@@ -15,6 +17,8 @@ server:
   port: 8100
 ---
 spring:
+  application:
+    name: eureka2
   config:
     activate:
       on-profile: host2
