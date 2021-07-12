@@ -15,7 +15,7 @@ management:
       show-details: always
     web:
       exposure:
-        include: health,info,hystrix.stream
+        include: '*'
 feign:
   circuitbreaker:
     enabled: true
