@@ -16,6 +16,12 @@ public class UserController {
         System.out.println("UserController:"+id);
         return id * 10;
     }
+    @GetMapping("/test")
+    public Integer findTest() {
+        System.out.println("UserController:");
+        return 111111111;
+    }
+
 
     @PostMapping(value = "/addUser", produces = {"application/json;charset=utf-8"})
     public User addUser(@RequestBody User user) {

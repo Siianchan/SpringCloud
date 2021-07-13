@@ -33,6 +33,13 @@ public class OrderController {
         return 777;
     }
 
+    @GetMapping("/zxq/{id}")
+    public Integer test(@PathVariable int id) {
+        //Feign调用
+        System.out.println("zxq" + id);
+        return 1111;
+    }
+
     @GetMapping("/test/{id}")
     public Integer findOrderFeign(@PathVariable int id) {
         //Feign调用

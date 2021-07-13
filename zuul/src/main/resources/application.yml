@@ -1,0 +1,15 @@
+server:
+  port: 8600
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/,http://localhost:8200/eureka/
+    fetch-registry: true
+zuul:
+  routes:
+    microservice-consumer-order:
+      path: /client/**
+      service-id: microservice-consumer-order

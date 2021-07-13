@@ -13,6 +13,7 @@ turbine:
   aggregator:
     cluster-config: default
   cluster-name-expression: new String("default")
+#instanceUrlSuffix:默认监控地址
 #turbine.appConfig：配置需要聚合的服务名称。
 #turbine.aggregator.clusterConfig：Turbine 需要聚合的集群名称。
 #turbine.clusterNameExpression：集群名表达式。
