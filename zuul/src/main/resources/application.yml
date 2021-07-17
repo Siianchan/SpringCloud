@@ -11,5 +11,6 @@ eureka:
 zuul:
   routes:
     microservice-consumer-order:
-      path: /client/**
+      path: /**
       service-id: microservice-consumer-order
+  prefix: /test
