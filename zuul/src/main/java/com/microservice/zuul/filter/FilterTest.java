@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Description:
  */
 public class FilterTest extends ZuulFilter {
+    
     public String filterType() {
         //执行器类型：pre -> route -> post -> error
         return "pre";
