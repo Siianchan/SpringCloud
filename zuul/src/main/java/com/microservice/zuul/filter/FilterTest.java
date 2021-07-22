@@ -1,11 +1,8 @@
 package com.microservice.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import sun.net.util.IPAddressUtil;
 
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @ProjectName: springcloud
@@ -14,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * @Description:
  */
 public class FilterTest extends ZuulFilter {
-    
+
     public String filterType() {
         //执行器类型：pre -> route -> post -> error
         return "pre";
